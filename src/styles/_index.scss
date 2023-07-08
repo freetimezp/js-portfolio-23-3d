@@ -1,1 +1,65 @@
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+$righteous: "Righteous",
+cursive;
+
+main {
+    overflow: hidden;
+
+    canvas {
+        position: static;
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        opacity: 0;
+        touch-action: none;
+        animation: fade-in 2s ease 0.3s forwards;
+        animation-delay: 0s;
+    }
+
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    .header {
+        position: absolute;
+        top: 0;
+        padding: 20px 0 0 100px;
+
+        h1 {
+            color: #fff;
+            font-family: $righteous;
+            font-size: 95px;
+            margin-bottom: 0;
+            text-shadow: 4px 4px rgb(39, 6, 253);
+        }
+
+        h3 {
+            color: rgb(126, 124, 124);
+            font-size: 40px;
+            font-weight: 300;
+            font-style: italic;
+        }
+    }
+
+    @media only screen and (max-width: 750px) {
+        header {
+            padding: 20px 20px;
+
+            h1 {
+                font-size: 50px;
+            }
+
+            h3 {
+                font-size: 20px;
+            }
+        }
+    }
+
+}
